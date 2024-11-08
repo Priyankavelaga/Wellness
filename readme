@@ -1,0 +1,26 @@
+Install the required libraries. Used Gemini Flash 1.5 model to generate the required output.
+
+Create the Virtual Environment activate the bin and run the following commands
+>> pip install flask 
+>> pip install markdown
+>> pip install requests
+>> pip install google-generativeai
+>> pip install -q -U google-generativeai
+>> pip install --upgrade pyodbc
+>> gcloud auth login
+>> gcloud config set project PROJECT_ID
+>> gcloud components update
+>> gcloud auth application-default set-quota-project QUOTA_PROJECT_ID
+
+
+Used the Custom Search Engine to genearte the yoga pictures as per the yoga pose
+
+Custom Search Engine > Create new engine > Name the engine > Search Site (https://www.yogajournal.com) > Add > Enable Image Search > Enable Safety Search (optional) > Create > Get the Custom Search ID (cx='CSE_ID') 
+
+Google cloud Console > Enable Custom Search API > Create Credentials > Create API key 
+
+Run the following commands
+>> export GEMINI_API_KEY="your_api_key_here"
+>> export API_KEY="your-google-api-key"
+>> export CSE_ID="your-google-cse-id"
+>> flask run
