@@ -89,10 +89,10 @@ def get_plan():
         <br>Suggest and list foods that should be avoided, considering the patient's age, diabetes, and blood pressure status while managing {disease}. Each food should be listed as a point starting in a new line.
         
         <br><br><br><strong>HERBS</strong>
-        <br>Suggest herbs, spices, plants, and powders for managing and/or curing {disease} based on their age, diabetes, and blood pressure. Include how they should be consumed for maximum benefit.
+        <br>Suggest herbs, spices, plants, roots, and powders for managing and/or curing {disease} based on their age, diabetes, and blood pressure. Include how they should be consumed for maximum benefit.
   
         <br><br><strong>YOGA</strong><br>
-        <br>Suggest all yoga poses to help manage or alleviate {disease} including images of the asana with description and benefits of the pose.
+        <br>Suggest all yoga poses to help manage or alleviate {disease} and speed up the healing process including images of the asana with description and benefits of the pose.
         """
         try:
             model = genai.GenerativeModel("gemini-1.5-flash")
@@ -118,7 +118,8 @@ def get_plan():
 
         prompt += f"""
         <br><br><br><strong>DIET PLAN</strong>
-        <br>Provide a diet plan for the patient as per the {disease} to help manage or alleviate {disease} that includes all types of foods like millets, fruits, vegetables, and the rest. Provide the recipe of the each plan starting in a new line.
+        <br>Provide a diet plan for the patient as per the {disease} to help manage or alleviate {disease} with all kinds of traditional and healthy foods.
+        Provide the recipe for each plan starting in a new line.
 
         <br><br><br><strong>SMOOTHIES OR DETOX DRINKS</strong>
         <br>List suitable smoothies, fruit juices, or detox drinks as points starting in a new line for managing their condition.
